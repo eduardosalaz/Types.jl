@@ -139,7 +139,8 @@ function read_solution(path::String)
 end
 
 function write_solution(solution, path::String)
-    jldsave(path; solution, solution.Instance)
+    instance = solution.Instance
+    jldsave(path; solution, instance)
 end
 
 
