@@ -25,6 +25,7 @@ struct Solution
     X::Matrix{Int64}
     Y::Vector{Int64}
     Weight::Int64
+    Time::Int64
 end
 
 export Instance, Solution
