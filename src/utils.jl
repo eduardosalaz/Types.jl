@@ -1,23 +1,80 @@
+using LaTeXStrings
 function plot_instance(Instance, path::String)
+    BU_coords = Instance.BU_coords
+    S_coords = Instance.S_coords
+    Sk = Instance.Sk
+    S₁ = Sk[1]
+    S₁_coords = S_coords[S₁, :]
+    #Y₁_used = [(Y2[j] ? :red : :white) for j in S₁]
+    S₂ = Sk[2]
+    S₂_coords = S_coords[S₂, :]
+    #Y₂_used = [(Y2[j] ? :red : :white) for j in S₂]
+    S₃ = Sk[3]
+    S₃_coords = S_coords[S₃, :]
+    #Y₃_used = [(Y2[j] ? :red : :white) for j in S₃]
+    S₄ = Sk[4]
+    S₄_coords = S_coords[S₄, :]
+    #Y₄_used = [(Y2[j] ? :red : :white) for j in S₄]
+    S₅ = Sk[5]
+    S₅_coords = S_coords[S₅, :]
+   # Y₅_used = [(Y2[j] ? :red : :white) for j in S₅]
     Plots.scatter(
-        Instance.BU_coords[:, 1],
-        Instance.BU_coords[:, 2],
-        label = nothing,
+        BU_coords[:, 1],
+        BU_coords[:, 2],
         markershape = :circle,
         markercolor = :blue,
+        label = "BUs"
     )
     Plots.scatter!(
-        Instance.S_coords[:, 1],
-        Instance.S_coords[:, 2],
-        label = nothing,
-        markershape = :square,
-        markercolor = :white,
+        S₁_coords[:, 1],
+        S₁_coords[:, 2],
+        label = L"S_1",
+        markershape = :hexagon,
+        markercolor = :red,
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
     )
-    sizeB = Instance.B
-    sizeS = Instance.S
+    Plots.scatter!(
+        S₂_coords[:, 1],
+        S₂_coords[:, 2],
+        label = L"S_2",
+        markershape = :diamond,
+        markercolor = :red,
+        markersize = 6,
+        markerstrokecolor = :red,
+        markerstrokewidth = 2,
+    )
+    Plots.scatter!(
+        S₃_coords[:, 1],
+        S₃_coords[:, 2],
+        label = L"S_3",
+        markershape = :star5,
+        markercolor = :red,
+        markersize = 6,
+        markerstrokecolor = :red,
+        markerstrokewidth = 2,
+    )
+    Plots.scatter!(
+        S₄_coords[:, 1],
+        S₄_coords[:, 2],
+        label = L"S_4",
+        markershape = :pentagon,
+        markercolor = :red,
+        markersize = 6,
+        markerstrokecolor = :red,
+        markerstrokewidth = 2,
+    )
+    Plots.scatter!(
+        S₅_coords[:, 1],
+        S₅_coords[:, 2],
+        label = L"S_5",
+        markershape = :star4,
+        markercolor = :red,
+        markersize = 6,
+        markerstrokecolor = :red,
+        markerstrokewidth = 2,
+    )
     png(path)
     @debug "Wrote plot and coords"
 end
@@ -26,8 +83,6 @@ function plot_solution(Solution, path::String)
     Instance = Solution.Instance
     BU_coords = Instance.BU_coords
     S_coords = Instance.S_coords
-    Y = Solution.Y
-    # Y = iszero.(Y)
     X = Solution.X
     S = Instance.S
     B = Instance.B

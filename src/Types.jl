@@ -1,5 +1,5 @@
 module Types
-using JLD2, Plots, DelimitedFiles
+using JLD2, DelimitedFiles, LaTeXStrings, Plots; gr()
 include("utils.jl")
 struct Instance
     B::Int64
