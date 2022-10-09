@@ -115,7 +115,8 @@ function plot_solution(Solution, path::String)
         BU_coords[:, 2],
         markershape = :circle,
         markercolor = :blue,
-        label = nothing
+        label = nothing,
+        dpi = 500
     )
     Plots.scatter!(
         S₁_coords[:, 1],
@@ -126,6 +127,7 @@ function plot_solution(Solution, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₂_coords[:, 1],
@@ -136,6 +138,7 @@ function plot_solution(Solution, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₃_coords[:, 1],
@@ -146,6 +149,7 @@ function plot_solution(Solution, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₄_coords[:, 1],
@@ -156,6 +160,7 @@ function plot_solution(Solution, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₅_coords[:, 1],
@@ -166,6 +171,7 @@ function plot_solution(Solution, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
 
     for i in 1:S
