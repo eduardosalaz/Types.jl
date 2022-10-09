@@ -1,7 +1,7 @@
 name = "Types"
 uuid = "7b3e2029-821e-499e-bcc7-d977996c9338"
 authors = ["Eduardo Salazar <eduardosalaz@outlook.com>"]
-version = "0.2.1"
+version = "0.2.2"
 
 [deps]
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
