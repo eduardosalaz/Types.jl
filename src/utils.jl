@@ -26,7 +26,7 @@ function plot_instance(Instance, path::String)
         markershape = :circle,
         markercolor = :blue,
         label = "BUs",
-        size = (1200, 800),
+        dpi = 500
     )
     Plots.scatter!(
         S₁_coords[:, 1],
