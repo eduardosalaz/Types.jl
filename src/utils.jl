@@ -25,7 +25,9 @@ function plot_instance(Instance, path::String)
         BU_coords[:, 2],
         markershape = :circle,
         markercolor = :blue,
-        label = "BUs"
+        label = "BUs",
+        size = (1200, 800),
+        dpi = 500
     )
     Plots.scatter!(
         S₁_coords[:, 1],
@@ -36,6 +38,7 @@ function plot_instance(Instance, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₂_coords[:, 1],
@@ -46,6 +49,7 @@ function plot_instance(Instance, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₃_coords[:, 1],
@@ -56,6 +60,7 @@ function plot_instance(Instance, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₄_coords[:, 1],
@@ -66,6 +71,7 @@ function plot_instance(Instance, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     Plots.scatter!(
         S₅_coords[:, 1],
@@ -76,6 +82,7 @@ function plot_instance(Instance, path::String)
         markersize = 6,
         markerstrokecolor = :red,
         markerstrokewidth = 2,
+        dpi = 500
     )
     png(path)
     @debug "Wrote plot and coords"
