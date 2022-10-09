@@ -1,8 +1,7 @@
 using LaTeXStrings
-plot_font = "Computer Modern";
-default(fontfamily=plot_font,framestyle=:box, grid=false, tickfontsize=7)
-
 function plot_instance(Instance, path::String)
+    plot_font = "Computer Modern";
+    default(fontfamily=plot_font,framestyle=:box, grid=false, tickfontsize=7)
     BU_coords = Instance.BU_coords
     S_coords = Instance.S_coords
     Sk = Instance.Sk
