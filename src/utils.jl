@@ -25,13 +25,13 @@ function plot_instance(Instance, path::String)
         BU_coords[:, 2],
         markershape = :circle,
         markercolor = :blue,
-        label = "BUs",
+        label = nothing,
         dpi = 500
     )
     Plots.scatter!(
         S₁_coords[:, 1],
         S₁_coords[:, 2],
-        label = L"S_1",
+        label = nothing,
         markershape = :hexagon,
         markercolor = :red,
         markersize = 6,
@@ -42,7 +42,7 @@ function plot_instance(Instance, path::String)
     Plots.scatter!(
         S₂_coords[:, 1],
         S₂_coords[:, 2],
-        label = L"S_2",
+        label = nothing,
         markershape = :diamond,
         markercolor = :red,
         markersize = 6,
@@ -53,7 +53,7 @@ function plot_instance(Instance, path::String)
     Plots.scatter!(
         S₃_coords[:, 1],
         S₃_coords[:, 2],
-        label = L"S_3",
+        label = nothing,
         markershape = :star5,
         markercolor = :red,
         markersize = 6,
@@ -64,7 +64,7 @@ function plot_instance(Instance, path::String)
     Plots.scatter!(
         S₄_coords[:, 1],
         S₄_coords[:, 2],
-        label = L"S_4",
+        label = nothing,
         markershape = :pentagon,
         markercolor = :red,
         markersize = 6,
@@ -75,7 +75,7 @@ function plot_instance(Instance, path::String)
     Plots.scatter!(
         S₅_coords[:, 1],
         S₅_coords[:, 2],
-        label = L"S_5",
+        label = nothing,
         markershape = :star4,
         markercolor = :red,
         markersize = 6,
