@@ -17,8 +17,8 @@ function plot_instance(Instance, path::String)
     S₄ = Sk[4]
     S₄_coords = S_coords[S₄, :]
     #Y₄_used = [(Y2[j] ? :red : :white) for j in S₄]
-    S₅ = Sk[5]
-    S₅_coords = S_coords[S₅, :]
+    # S₅ = Sk[5]
+    # S₅_coords = S_coords[S₅, :]
    # Y₅_used = [(Y2[j] ? :red : :white) for j in S₅]
     Plots.scatter(
         BU_coords[:, 1],
@@ -72,6 +72,7 @@ function plot_instance(Instance, path::String)
         markerstrokewidth = 2,
         dpi = 500
     )
+    #=
     Plots.scatter!(
         S₅_coords[:, 1],
         S₅_coords[:, 2],
@@ -83,6 +84,7 @@ function plot_instance(Instance, path::String)
         markerstrokewidth = 2,
         dpi = 500
     )
+    =#
     png(path)
     @debug "Wrote plot and coords"
 end
@@ -109,8 +111,8 @@ function plot_solution(Solution, path::String)
     S₄ = Sk[4]
     S₄_coords = S_coords[S₄, :]
     #Y₄_used = [(Y2[j] ? :red : :white) for j in S₄]
-    S₅ = Sk[5]
-    S₅_coords = S_coords[S₅, :]
+    #S₅ = Sk[5]
+    #S₅_coords = S_coords[S₅, :]
    # Y₅_used = [(Y2[j] ? :red : :white) for j in S₅]
     Plots.scatter(
         BU_coords[:, 1],
@@ -164,6 +166,7 @@ function plot_solution(Solution, path::String)
         markerstrokewidth = 2,
         dpi = 500
     )
+    #=
     Plots.scatter!(
         S₅_coords[:, 1],
         S₅_coords[:, 2],
@@ -175,6 +178,7 @@ function plot_solution(Solution, path::String)
         markerstrokewidth = 2,
         dpi = 500
     )
+    =#
 
     for i in 1:S
         for j in 1:B
